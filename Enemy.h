@@ -6,13 +6,13 @@
 using namespace std;
 
 
-class Enemy{
-    private:
+class Enemy{  
+    public:
         int enemyHealthValue;
         int enemyAttackValue;
-    public:
-        int enemyAttackToHit()
-        void enemyTakeDamage()
+        int enemyHealth;
+        bool enemyAttackToHit()
+        int enemyTakeDamage(enemyHealthValue)
 
 
 
