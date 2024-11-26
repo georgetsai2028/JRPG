@@ -11,8 +11,8 @@ class Enemy{
         int enemyHealthValue;
         int enemyAttackValue;
         int enemyHealth;
-        bool enemyAttackToHit()
-        int enemyTakeDamage(enemyHealthValue)
+        bool enemyAttackToHit();
+        int enemyTakeDamage(enemyHealthValue);
 
 
 
