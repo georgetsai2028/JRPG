@@ -1,4 +1,5 @@
 #include "player.h"
+#include <algorith>
 #include <iostream> // Required for std::cout and std::endl
 
 using namespace std; // Use the standard namespace

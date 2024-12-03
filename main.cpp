@@ -2,6 +2,7 @@
 #include <string>
 #include <thread>
 #include <chrono>
+#include <algorithm>
 #include "storyline.h"
 #include "player.h"
 #include "enemy.h"
