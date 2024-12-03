@@ -2,12 +2,16 @@
 #include <string>
 #include <vector>
 #include <cmath>
-#include "storyline.h"
+#include "header/storyline.cpp"
 using namespace std;
 
 int main()
 {
-    vector<string>storyline = getStoryline();
-    cout << storyline[0] << endl;
+    vector<string> storyline = Summary();
+
+    for (int i = 0; i < storyline.size(); i++)
+    {
+        cout << storyline[i] << endl;
+    }
     return 0;
 }
