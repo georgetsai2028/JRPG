@@ -61,7 +61,7 @@ void battle()
                     else 
                     {
                         cout << "You cast a spell with your staff, dealing " << player.attackPower + 10 << " damage!\n";
-                        enemy.health -= (player.attackPower + 10); // Magical attacks deal extra damage
+                        enemy.health -= (player.attackPower + 10); 
                         player.mana -= 10; 
                     }
                 } 
