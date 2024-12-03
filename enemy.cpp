@@ -1,13 +1,13 @@
-#include "Enemy.h"
+#include "enemy.h"
 #include <iostream>
 
-using namespace std; // Use the standard namespace
+using namespace std;
 
-// Constructor implementation
+// enemy constructor
 Enemy::Enemy(const string &name, int health, int attackPower, int mana)
     : name(name), health(health), attackPower(attackPower), mana(mana) {}
 
-// Display enemy stats
+// shows enemy stats
 void Enemy::displayStats()
 {
     cout << "Enemy: " << name << endl;
