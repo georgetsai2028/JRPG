@@ -3,21 +3,23 @@
 
 #include <string>
 
-using namespace std; // Use the standard namespace
+using namespace std; 
 
 class Enemy
 {
 public:
-    string name;     // Name of the enemy
-    int health;      // Health points of the enemy
-    int attackPower; // Attack power of the enemy
-    int mana;        // Mana of the enemy
+    string name;     
+    int health;      
+    int attackPower; 
+    int mana;       
 
-    // Constructor
+    
     Enemy(const string &name, int health, int attackPower, int mana);
 
-    // Method to display the enemy's stats
+    //displays the enemies stats
     void displayStats();
 };
-
+//Nota's Notes, gonna rewrite this a little bit.
+//gonna have 3 enemy classes, EnemyEasy, EnemyNormal, EnemyHard
+//thought process is each enemy will have a different health have attack power
 #endif

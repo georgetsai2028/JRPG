@@ -3,13 +3,14 @@
 
 #include <string>
 #include <vector>
+#include <algorithm>
 
-using namespace std; // Avoid the need to prefix std:: for standard types
+using namespace std; 
 
 class Player
 {
 public:
-    string name; // No need for std:: prefix
+    string name; 
     int health;
     int mana;
     int attackPower;

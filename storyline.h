@@ -2,5 +2,6 @@
 #define STORYLINE_H
 
 void displayStoryline();
+void firstBattle();
 
 #endif
