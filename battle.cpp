@@ -1,7 +1,7 @@
 #include "battle.h"
 #include <iostream>
 
-using namespace std; // Use the standard namespace
+using namespace std; 
 
 // Function to execute a battle sequence
 void battle(Player &player, Enemy &enemy)
