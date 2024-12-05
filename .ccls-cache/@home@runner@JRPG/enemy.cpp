@@ -13,12 +13,15 @@ void EnemyEasy::displayEnemyStats() {
   cout << "Health: " << enemyHealthEasy << endl;
   cout << "Attack Power: " << enemyDamageOutputEasy << endl;
 }
-void EnemyEasy::displayEnemyStats(){
-    
+int EnemyEasy::getEnemyHealthEasy(){
+    cout << "bruh"; 
 }
-int EnemyEasy::getEnemyHealthEasy();
-int EnemyEasy::getEnemyDamageEasy();
-int EnemyEasy::enemyTakeDamageEasy();
+int EnemyEasy::getEnemyDamageEasy(){
+    cout << "bruh";
+}
+int EnemyEasy::enemyTakeDamageEasy(){
+    cout << "bruh";
+}
 // return "easy", "normal", "hard", ""
 
 // health attack power, type of enemy, health of enemy,
