@@ -14,8 +14,10 @@ int main() {
 
   firstBattle();
 
+  string playerName;
+  getline(cin, playerName);
   
-  Player player("Hero", 100, 20, 20);
+  Player player(playerName, 100, 20, 20);
 
   cout << "A wild Goblin appears!" << endl;
   Enemy goblin("Goblin", 50, 15, 0);

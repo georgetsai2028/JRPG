@@ -5,36 +5,30 @@
 
 using namespace std; 
 
-class EnemyEasy
-{
+class Enemy {
 public:    
-    int enemyHealthEasy;      
-    int enemyDamageOutputEasy;
-    EnemyEasy(int enemyHealthEasy, int enemyDamageOutputEasy);
-
-    //displays the enemies stats
+    int enemyHealth;      
+    int enemyDamage;
+    Enemy(int enemyHealth, int enemyDamage);
     void displayEnemyStats();
-    int getEnemyHealthEasy();
-    int getEnemyDamageEasy();
-    int enemyTakeDamageEasy();
+    int enemyTakeDamage(int damage);
+
+    int EnemyEasy(); //enemy easy
+    void sethpEasy(int enemyHealth);
+    void setdmgEasy(int enemyDamage);
+    int gethpEasy();
+    int getdmgEasy();
+
+    int EnemyNormal(); //enemy normal
+    void sethpNormal(int enemyHealth);
+    void setdmgNormal(int enemyDamage);
+    int gethpNormal();
+    int getdmgNormal();
+
+    int EnemyHard(); //enemy hard
+    void sethpHard(int enemyHealth);
+    void setdmgHard(int enemyDamage);
+    int gethpHard();
+    int getdmgHard();
 };
-class EnemyNormal
-{
-public:    
-    int enemyHealthNormal;      
-    int enemyDamageOutputEasy;
-    EnemyEasy(int enemyHealthEasy, int enemyDamageOutputEasy);
-
-    //displays the enemies stats
-    void displayEnemyStats();
-    int getEnemyHealthEasy();
-    int getEnemyDamageEasy();
-    int enemyTakeDamageEasy();
-};
-
-
-
-//Nota's Notes, gonna rewrite this a little bit.
-//gonna have 3 enemy classes, EnemyEasy, EnemyNormal, EnemyHard
-//thought process is each enemy will have a different health have attack power
 #endif

@@ -3,25 +3,62 @@
 
 using namespace std;
 
-// enemyEasy constructor
-EnemyEasy::EnemyEasy(int enemyHealthEasy, int enemyDamageOutputEasy)
-    : enemyHealthEasy(enemyHealthEasy), enemyDamageOutputEasy(enemyDamageOutputEasy) {}
 
+Enemy::Enemy(int enemyHealth, int enemyDamage) //basic enemy constructor
+    : enemyHealth(enemyHealth), enemyDamage(enemyDamage) {}
 
-// shows enemy stats
-void EnemyEasy::displayEnemyStats() {
-  cout << "Health: " << enemyHealthEasy << endl;
-  cout << "Attack Power: " << enemyDamageOutputEasy << endl;
-}
-int EnemyEasy::getEnemyHealthEasy(){
-    cout << "bruh"; 
-}
-int EnemyEasy::getEnemyDamageEasy(){
-    cout << "bruh";
-}
-int EnemyEasy::enemyTakeDamageEasy(){
-    cout << "bruh";
-}
-// return "easy", "normal", "hard", ""
+int Enemy::EnemyEasy(){
+    Enemy::sethpEasy(enemyHealth);{
+        enemyHealth = 30;
+    }  
+    Enemy::setdmgEasy(enemyDamage);{
+        enemyDamage = 5;
+    }
+    Enemy::gethpEasy();{
+        return enemyHealth;
+    }
+    Enemy::getdmgEasy();{
+        return enemyDamage;
+    }
+}//Easy enemy stats setup
 
-// health attack power, type of enemy, health of enemy,
+int Enemy::EnemyNormal(){
+    Enemy::sethpNormal(enemyHealth);{
+        enemyHealth = 60;
+    }  
+    Enemy::setdmgNormal(enemyDamage);{
+        enemyDamage = 7;
+    }
+    Enemy::gethpNormal();{
+        return enemyHealth;
+    }
+    Enemy::getdmgNormal();{
+        return enemyDamage;
+    }
+}//Normal enemy stats setup
+
+int Enemy::EnemyHard(){
+    Enemy::sethpHard(enemyHealth);{
+        enemyHealth = 100;
+    }  
+    Enemy::setdmgHard(enemyDamage);{
+        enemyDamage = 10;
+    }
+    Enemy::gethpHard();{
+        return enemyHealth;
+    }
+    Enemy::getdmgHard();{
+        return enemyDamage;
+    }
+}//Hard enemy stats setup
+
+void Enemy::displayEnemyStats() {
+  cout << "Health: " << enemyHealth << endl;
+  cout << "Attack Power: " << enemyDamage << endl;
+}//Shows enemy stats 
+
+int Enemy::enemyTakeDamage(int damage) {// enemy takes damage
+  enemyHealth -= damage;
+  return enemyHealth;
+}//Enemy takes damage
+
