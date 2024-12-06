@@ -12,6 +12,9 @@ public:
 
 //display player stats
 void displayStats() const;
+void takeDamage(int damage);
+void regenerateMana();
+int attack() const;
 
 private:
 string name;

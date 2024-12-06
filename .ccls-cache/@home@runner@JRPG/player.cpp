@@ -17,3 +17,19 @@ void Player::displayStats() const {
   cout << "Attack: " << attackPower << endl;
   cout << "Mana: " << mana << endl;
 }
+
+void Player::takeDamage(int damage)
+{
+  health -= damage;
+  if (health < 0) { health = 0;}
+}
+
+void Player::regenerateMana()
+{
+  mana = mana + 5;
+}
+
+int Player::attack() const 
+{
+  return attackPower;
+}

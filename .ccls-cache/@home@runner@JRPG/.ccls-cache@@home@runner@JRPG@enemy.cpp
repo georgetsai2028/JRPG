@@ -3,62 +3,41 @@
 
 using namespace std;
 
-
-Enemy::Enemy(int enemyHealth, int enemyDamage) //basic enemy constructor
+Enemy::Enemy(int enemyHealth, int enemyDamage) // basic enemy constructor
     : enemyHealth(enemyHealth), enemyDamage(enemyDamage) {}
 
-int Enemy::EnemyEasy(){
-    Enemy::sethpEasy(enemyHealth);{
-        enemyHealth = 30;
-    }  
-    Enemy::setdmgEasy(enemyDamage);{
-        enemyDamage = 5;
-    }
-    Enemy::gethpEasy();{
-        return enemyHealth;
-    }
-    Enemy::getdmgEasy();{
-        return enemyDamage;
-    }
-}//Easy enemy stats setup
+//easy enemy stats
+int Enemy::EnemyEasy() {
+  Enemy::enemyHealth = 30;
+  Enemy::enemyDamage = 5;
 
-int Enemy::EnemyNormal(){
-    Enemy::sethpNormal(enemyHealth);{
-        enemyHealth = 60;
-    }  
-    Enemy::setdmgNormal(enemyDamage);{
-        enemyDamage = 7;
-    }
-    Enemy::gethpNormal();{
-        return enemyHealth;
-    }
-    Enemy::getdmgNormal();{
-        return enemyDamage;
-    }
-}//Normal enemy stats setup
+} 
 
-int Enemy::EnemyHard(){
-    Enemy::sethpHard(enemyHealth);{
-        enemyHealth = 100;
-    }  
-    Enemy::setdmgHard(enemyDamage);{
-        enemyDamage = 10;
-    }
-    Enemy::gethpHard();{
-        return enemyHealth;
-    }
-    Enemy::getdmgHard();{
-        return enemyDamage;
-    }
-}//Hard enemy stats setup
+//normal enemy stats
+int Enemy::EnemyNormal() {
+  Enemy::enemyHealth = 100;
+  Enemy::enemyDamage= 15; 
+  
+} 
+
+//hard enemy stats
+int Enemy::EnemyHard() {
+  Enemy::enemyHealth = 200;
+  Enemy::enemyDamage = 30;
+} 
 
 void Enemy::displayEnemyStats() {
   cout << "Health: " << enemyHealth << endl;
-  cout << "Attack Power: " << enemyDamage << endl;
-}//Shows enemy stats 
+  cout << "Attack: " << enemyDamage << endl;
+} // Shows enemy stats
 
-int Enemy::enemyTakeDamage(int damage) {// enemy takes damage
+//how enemy takes damage
+int Enemy::enemyTakeDamage(int damage) { 
   enemyHealth -= damage;
   return enemyHealth;
-}//Enemy takes damage
+} 
 
+int Enemy::attack() const
+{
+  return enemyDamage;
+}

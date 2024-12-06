@@ -1,13 +1,15 @@
 #ifndef BATTLESYSTEM_H
 #define BATTLESYSTEM_H
 #include <iostream>
-#include "baseEnemy.h"
-#include "baseCharacter.h"
+#include "enemy.h"
+#include "player.h"
 
 class BattleSystem{
 public:
-  BattleSystemm(Player &player, Enemy &enemy)
+  BattleSystem(Player &player, Enemy &enemy)
 
   void StartBattle();
+
+
 
 }

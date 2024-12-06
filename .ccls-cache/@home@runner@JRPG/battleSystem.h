@@ -1,14 +1,17 @@
 #ifndef BATTLESYSTEM_H
 #define BATTLESYSTEM_H
 #include <iostream>
-#include "player.h"
 #include "enemy.h"
+#include "player.h"
 
 class BattleSystem{
+private:
+  Player& player;
+  Enemy& enemy;
+
 public:
-  BattleSystem(Player &player, Enemy &enemy)
+  BattleSystemm(Player &player, Enemy &enemy)
 
-  void EasyMode();
-
+  void startBattle(int difficulty);
 
 }
