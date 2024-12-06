@@ -18,7 +18,8 @@ void battle()
 
     cout << "Battle Start!\n";
 
-   
+    if (enemy.type == "easy") 
+    {
         while (player.health > 0 && enemy.health > 0) 
         {
             cout << "\nPlayer Health: " << player.health << ", Mana: " << player.mana << "/" << player.maxMana;
@@ -158,6 +159,7 @@ void battle()
             }
         }
     }
+}
 
 int main() 
 {
