@@ -9,7 +9,8 @@
 
 using namespace std;
 
-void battle() {
+void battle() 
+{
     BaseCharacter player;
     BaseEnemy enemy;
     Inventory inventory;
@@ -159,7 +160,6 @@ void battle() {
         }
     }
 }
-
 int main() 
 {
     srand(static_cast<unsigned>(time(0)));
