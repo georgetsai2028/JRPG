@@ -1,3 +1,4 @@
+#include "battleSystem.h"
 #include "enemy.h"
 #include "player.h"
 #include <cstdlib>
@@ -8,11 +9,11 @@
 
 using namespace std;
 
-BattleSystem::BattleSystem(Player &player, Enemy &enemy)
-    : player(player), enemy(enemy) {}
 
-void battle() {
-  Player player;
+BattleSystem::BattleSystem(Player &player, Enemy &enemy) : player(player), enemy(enemy) {}
+
+void BattleSystem::StartBattle() {
+  Player player = Player();
   Enemy enemy;
 
   cout << "Battle Start!\n";

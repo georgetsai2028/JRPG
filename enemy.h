@@ -24,4 +24,4 @@ public:
     int EnemyHard(); //enemy hard
 
 };
-#endi
+#endif

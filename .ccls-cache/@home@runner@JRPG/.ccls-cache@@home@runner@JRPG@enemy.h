@@ -4,10 +4,12 @@
 #include <string>
 
 using namespace std; 
+using namespace std; 
 
 class Enemy {
-private: int enemyHealth;
-         int enemyDamage;
+private:
+    int enemyHealth;
+    int enemyDamage;
 public:
     Enemy(int enemyHealth, int enemyDamage);
 
