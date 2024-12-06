@@ -6,38 +6,29 @@ using namespace std;
 Enemy::Enemy(int enemyHealth, int enemyDamage) // basic enemy constructor
     : enemyHealth(enemyHealth), enemyDamage(enemyDamage) {}
 
-//easy enemy stats
+// easy enemy stats
 int Enemy::EnemyEasy() {
   Enemy::enemyHealth = 30;
   Enemy::enemyDamage = 5;
+}
 
-} 
-
-//normal enemy stats
+// normal enemy stats
 int Enemy::EnemyNormal() {
   Enemy::enemyHealth = 100;
-  Enemy::enemyDamage= 15; 
-  
-} 
+  Enemy::enemyDamage = 15;
+}
 
-//hard enemy stats
+// hard enemy stats
 int Enemy::EnemyHard() {
   Enemy::enemyHealth = 200;
   Enemy::enemyDamage = 30;
-} 
-
+}
 void Enemy::displayEnemyStats() {
   cout << "Health: " << enemyHealth << endl;
-  cout << "Attack: " << enemyDamage << endl;
+  cout << "Attack Power: " << enemyDamage << endl;
 } // Shows enemy stats
 
-//how enemy takes damage
-int Enemy::enemyTakeDamage(int damage) { 
+int Enemy::enemyTakeDamage(int damage) { // enemy takes damage
   enemyHealth -= damage;
   return enemyHealth;
-} 
-
-int Enemy::attack() const
-{
-  return enemyDamage;
-}
+} // Enemy takes damage

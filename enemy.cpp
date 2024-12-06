@@ -6,39 +6,23 @@ using namespace std;
 Enemy::Enemy(int enemyHealth, int enemyDamage) // basic enemy constructor
     : enemyHealth(enemyHealth), enemyDamage(enemyDamage) {}
 
+// easy enemy stats
 int Enemy::EnemyEasy() {
-  Enemy::sethpEasy(enemyHealth);
-  { enemyHealth = 30; }
-  Enemy::setdmgEasy(enemyDamage);
-  { enemyDamage = 5; }
-  Enemy::gethpEasy();
-  { return enemyHealth; }
-  Enemy::getdmgEasy();
-  { return enemyDamage; }
-} // Easy enemy stats setup
+  Enemy::enemyHealth = 30;
+  Enemy::enemyDamage = 5;
+}
 
+// normal enemy stats
 int Enemy::EnemyNormal() {
-  Enemy::sethpNormal(enemyHealth);
-  { enemyHealth = 100; }
-  Enemy::setdmgNormal(enemyDamage);
-  { enemyDamage = 15; }
-  Enemy::gethpNormal();
-  { return enemyHealth; }
-  Enemy::getdmgNormal();
-  { return enemyDamage; }
-} // Normal enemy stats setup
+  Enemy::enemyHealth = 100;
+  Enemy::enemyDamage = 15;
+}
 
+// hard enemy stats
 int Enemy::EnemyHard() {
-  Enemy::sethpHard(enemyHealth);
-  { enemyHealth = 200; }
-  Enemy::setdmgHard(enemyDamage);
-  { enemyDamage = 20; }
-  Enemy::gethpHard();
-  { return enemyHealth; }
-  Enemy::getdmgHard();
-  { return enemyDamage; }
-} // Hard enemy stats setup
-
+  Enemy::enemyHealth = 200;
+  Enemy::enemyDamage = 30;
+}
 void Enemy::displayEnemyStats() {
   cout << "Health: " << enemyHealth << endl;
   cout << "Attack Power: " << enemyDamage << endl;
