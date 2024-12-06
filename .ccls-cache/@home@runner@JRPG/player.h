@@ -11,7 +11,7 @@ public:
     Player(string name, int health, int attackPower, int mana); //constructor
 
 //set name func
-string setName(const string &newName);
+void setName(string &newName);
 
 //display player stats
 void displayStats() const;

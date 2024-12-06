@@ -13,7 +13,7 @@ Player::Player(string name, int health, int attackPower, int mana) :
   mana(20) {}
 }
 
-void Player::setName(const string &newName)
+void Player::setName(string &newName)
 { 
   name = newName;
 }
