@@ -8,8 +8,9 @@
 class BattleSystem{
 public:
   BattleSystem(Player &player, Enemy &enemy)
+: player(player), enemy(enemy){}
 
-  void StartBattle();
+void StartBattle();
 private: 
   Player &player;
   Enemy &enemy;

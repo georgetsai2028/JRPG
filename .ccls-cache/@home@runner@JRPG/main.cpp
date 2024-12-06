@@ -14,5 +14,13 @@ int main() {
 
   firstBattle();
 
+  Player player;
+  Enemy goblin(40, 10);
+  
+  goblin.setDifficulty("easy");
+  BattleSystem BattleSystem(player, enemy);
+
+  BattleSystem.StartBattle();
+
   return 0;
 }

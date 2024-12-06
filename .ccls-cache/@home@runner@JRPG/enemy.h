@@ -11,17 +11,13 @@ private:
     int enemyHealth;
     int enemyDamage;
 public:
-    Enemy(int enemyHealth, int enemyDamage);
+    Enemy(int enemyHealth = 50, int enemyDamage = 10);
 
     void displayEnemyStats();
     int enemyTakeDamage(int damage);
     int attack() const;
 
-    int EnemyEasy(); //enemy easy
-
-    int EnemyNormal(); //enemy normal
-
-    int EnemyHard(); //enemy hard
+    void setDifficulty(const string &difficulty);
 
 };
 #endif
