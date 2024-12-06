@@ -1,4 +1,4 @@
-#include "battleSystem.h".h"
+#include "battleSystem.h"
 #include "enemy.h"
 #include "player.h"
 #include "storyline.h"
@@ -16,7 +16,7 @@ int main() {
 
   string playerName;
   getline(cin, playerName);
-  
+
   Player player(playerName, 100, 20, 20);
 
   cout << "A wild Goblin appears!" << endl;

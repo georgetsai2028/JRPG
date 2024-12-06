@@ -5,17 +5,11 @@
 
 using namespace std;
 
-//initialize player stats
-Player::Player(string name, int health, int attackPower, int mana) :
-  name(name),
+//initialize player stats aka player constructor
+Player::Player(int health, int attackPower, int mana) :
   health(100),
   attackPower(20),
   mana(20) {}
-}
-
-void Player::setName(string &newName)
-{ 
-  name = newName;
 }
 
 void Player::displayStats() const {

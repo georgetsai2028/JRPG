@@ -33,7 +33,7 @@ void displayStoryline() {
       "You look up and your not even in your country anymore. Your in a "
       "beautiful grassland");
   typewriterEffect(
-      "A lady tells you to come back home, that dinner is ready. She speaks in "
+      "A lady tells you to come back home, she's says that dinner is ready. She speaks in "
       "a foreign language but for some reason you understand it.");
   typewriterEffect(
       "Turns out you have been transported to a random world and you are now a "

@@ -8,10 +8,7 @@
 using namespace std;
 class Player {
 public:
-    Player(string name, int health, int attackPower, int mana); //constructor
-
-//set name func
-void setName(string &newName);
+    Player(int health, int attackPower, int mana); //constructor
 
 //display player stats
 void displayStats() const;
