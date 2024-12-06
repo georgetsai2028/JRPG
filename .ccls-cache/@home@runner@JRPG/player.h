@@ -8,20 +8,17 @@
 using namespace std;
 class Player {
 public:
-    Player(int health, int attackPower, int mana); //constructor
+    Player(int health = 100, int attackPower = 20, int mana = 20); 
+//default onstructor
 
 //display player stats
-void displayStats() const;
-void takeDamage(int damage);
-void regenerateMana();
-int attack() const;
+    void displayStats() const;
 
+    int health;
+    int attackPower;
+    int mana;
 private:
-string name;
-int health;
-int attackPower;
-int mana;
-
+    int maxMana = 100;
 };
 
 #endif

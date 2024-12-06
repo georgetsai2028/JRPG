@@ -5,11 +5,9 @@
 
 using namespace std;
 
-//initialize player stats aka player constructor
-Player::Player(int health, int attackPower, int mana) :
-  health(100),
-  attackPower(20),
-  mana(20) {}
+// initialize player stats aka player constructor
+Player::Player(int health, int attackPower, int mana)
+    : health(health), attackPower(attackPower), mana(mana) {}
 }
 
 void Player::displayStats() const {
