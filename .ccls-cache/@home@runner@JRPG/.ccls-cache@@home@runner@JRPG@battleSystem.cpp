@@ -10,117 +10,57 @@
 using namespace std;
 
 
-BattleSystem::BattleSystem(Player &player, Enemy &enemy) : player(player), enemy(enemy) {}
-
 void BattleSystem::StartBattle() {
-  Player player = Player();
-  Enemy enemy;
 
   cout << "Battle Start!\n";
 
-  if (enemy.type == "easy") {
-    while (player.health > 0 && enemy.health > 0) {
-      cout << "\nPlayer Health: " << player.health << ", Mana: " << player.mana
-           << "/" << player.maxMana;
-      cout << "\nEnemy Health: " << enemy.health << "\n";
+    while (player.health > 0 && enemy.enemyHealth > 0) {
+      player.displayStats();
+      enemy.displayEnemyStats();
 
-      cout << "Choose an action:\n1. Attack\n2. Run Away\n";
+      cout << "Choose an action: " << endl;
+      cout << "1. Attack" << endl;
+      cout << "2. Run Away (gain 10 health, gain 10 mana)" << endl;
+      
       int choice;
       cin >> choice;
-
-      if (choice == 1) {
-        vector<string> playerItems = inventory.getItems();
-        bool hasAK = false, hasStaff = false;
-
-        for (const auto &item : playerItems) {
-          if (item == "AK47")
-            hasAK = true;
-          if (item == "Staff")
-            hasStaff = true;
-        }
-
-        if (hasStaff) {
-          string move;
-          cout << "Choose spell:\n 1.basic (10% chance to miss)\n "
-                  "2.fireball(15% chance to miss)\n 3.meele\n";
-          cin >> move;
-
-          if (move == "1" && player.mana >= 10) {
-            if (rand() % 100 < 10) {
-              cout << "You missed your magical attack!\n";
-            } else {
-              cout << "You cast a spell, dealing " << player.attackPower + 10
-                   << " damage!\n";
-              enemy.health -= (player.attackPower + 10);
-              player.mana -= 10;
-            }
-          } else if (move == "2" && player.mana >= 15) {
-            if (rand() % 100 < 15) {
-              cout << "You missed your magical attack!\n";
-            } else {
-              cout << "You cast fireball, dealing " << player.attackPower + 15
-                   << " damage!\n";
-              enemy.health -= (player.attackPower + 15);
-              player.mana -= 15;
-            }
-          } else if (move == "3") {
-            cout << "You attack the enemy for " << player.attackPower
-                 << " damage!\n";
-            enemy.health -= player.attackPower;
-          } else {
-            cout << "Not enough mana! Defaulting to physical attack.\n";
-          }
-        } else if (hasAK) {
-          if (rand() % 100 < 5) {
-            cout << "You missed your shot!\n";
-          } else {
-            cout << "You shoot the enemy, killing them instantly!\n";
-            enemy.health = 0;
-          }
-        } else {
-          cout << "You attack the enemy for " << player.attackPower
-               << " damage!\n";
-          enemy.health -= player.attackPower;
-        }
-      } else if (choice == 2) {
-        cout << "You attempt to run away...\n";
-        if (rand() % 4 == 0) {
-          cout << "You successfully ran away!\n";
-          return;
-        } else {
-          cout
-              << "Failed to run away! The enemy retaliates and attacks you for "
-              << enemy.attackPower << " damage!\n";
-          player.health -= enemy.attackPower;
-        }
-      } else {
-        cout << "Invalid choice. Try again.\n";
+      while (choice != 1 && choice != 2)
+      {
+        cout << "Invalid Input, please enter only 1 or 2" << endl;
+        cin >> choice;
+      }
+      if (choice == 1 && player.mana > 5) //Player attacks
+      {
+        cout << "You shot a fireball dealing " << player.attackPower << " damage to the enemy!" << endl;
+        enemy.enemyHealth = enemy.enemyHealth - player.attackPower;
+        player.mana = player.mana - 5;
+      }
+      else if (choice == 1 && player.mana < 5)
+      {
+        cout << "You are out of mana :(" << endl;
+        cout << "You punch the enemy for 5 damage!" << endl;
+        enemy.enemyHealth = enemy.enemyHealth - 5;
+      }
+      else if (choice == 2)
+      {
+        cout << "You ran away strategically, totally not because you're scared" << endl;
+        cout << "You gained 10 health and 10 mana" << endl;
+        player.health += 10;
+        player.mana += 10;
       }
 
-      if (enemy.health > 0) {
-        if (rand() % 100 < 15) {
-          cout << "The enemy missed its attack!\n";
-        } else {
-          cout << "The enemy attacks you for " << enemy.attackPower
-               << " damage!\n";
-          player.health -= enemy.attackPower;
-        }
-      }
+      //enemy turn
+      cout << "Enemy attacks you for " << enemy.enemyDamage << " damage" << endl;
+      player.health = player.health - enemy.enemyDamage;
 
-      player.mana = min(player.mana + 5, player.maxMana);
-      cout << "You regenerate 5 mana. Current Mana: " << player.mana << "\n";
-
-      if (player.health <= 0) {
-        cout << "\nYou have been defeated...\n";
-      } else if (enemy.health <= 0) {
-        cout << "\nYou defeated the enemy!\n";
-      }
+      cout << "You regenerate 5 mana. Current Mana: " << player.mana << endl;
     }
-  }
-}
-
-int main() {
-  srand(static_cast<unsigned>(time(0)));
-  battle();
-  return 0;
+      if (player.health <= 0) 
+      {
+        cout << "You have been defeated..." << endl;
+      } 
+      else if (enemy.enemyHealth <= 0) 
+      {
+        cout << "You defeated the enemy!" << endl;
+      }
 }

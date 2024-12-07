@@ -18,7 +18,7 @@ int main() {
   Enemy goblin(40, 10);
   
   goblin.setDifficulty("easy");
-  BattleSystem BattleSystem(player, enemy);
+  BattleSystem BattleSystem(player, goblin);
 
   BattleSystem.StartBattle();
 
