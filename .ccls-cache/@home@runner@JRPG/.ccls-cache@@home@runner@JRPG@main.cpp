@@ -10,15 +10,27 @@
 
 using namespace std;
 int main() {
-  //displayStoryline();
-
+  displayStorylinePT1();
+  
+  displayStorylinePT2();
+  
+  displayStorylinePT3();
+  
   firstBattle();
 
   Player player;
   Enemy goblin(40, 10);
+  BattleSystem BattleSystem(Player player, Enemy enemy);
   
   goblin.setDifficulty("easy");
-  BattleSystem BattleSystem(player, goblin);
+  BattleSystem(player, goblin);
+
+  BattleSystem.StartBattle();
+
+  Enemy knight(100, 20);
+  
+  knight.setDifficulty("normal");
+  BattleSystem(player, knight);
 
   BattleSystem.StartBattle();
 
