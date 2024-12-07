@@ -5,4 +5,4 @@ run = "g++ main.cpp storyline.cpp player.cpp enemy.cpp battleSystem.cpp -o main 
 channel = "stable-24_05"
 
 [deployment]
-run = ["sh", "-c", "g++ main.cpp storyline.cpp player.cpp enemy.cpp battle.cpp -o main && ./main"]
+run = ["sh", "-c", "g++ main.cpp storyline.cpp player.cpp enemy.cpp battleSystem.cpp -o main && ./main"]

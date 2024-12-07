@@ -11,7 +11,7 @@ using namespace std;
 
 
 void BattleSystem::StartBattle() {
-
+  int choice = 0;
   cout << "Battle Start!\n";
 
     while (player.health > 0 && enemy.enemyHealth > 0) {
@@ -22,11 +22,11 @@ void BattleSystem::StartBattle() {
       cout << "1. Attack" << endl;
       cout << "2. Run Away (gain 10 health, gain 10 mana)" << endl;
       
-      int choice;
       cin >> choice;
       while (choice != 1 && choice != 2)
       {
         cout << "Invalid Input, please enter only 1 or 2" << endl;
+        cin.clear();
         cin >> choice;
       }
       if (choice == 1 && player.mana > 5) //Player attacks
