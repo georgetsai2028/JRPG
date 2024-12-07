@@ -1,5 +1,5 @@
 modules = ["cpp-clang14", "c-clang14"]
-run = "g++ main.cpp storyline.cpp player.cpp enemy.cpp battle.cpp -o main && ./main"
+run = "g++ main.cpp storyline.cpp player.cpp enemy.cpp battleSystem.cpp -o main && ./main"
 
 [nix]
 channel = "stable-24_05"
