@@ -15,7 +15,10 @@ void BattleSystem::StartBattle() {
   cout << "Battle Start!\n";
 
     while (player.health > 0 && enemy.enemyHealth > 0) {
+      cout << "Your Stats:" << endl;
       player.displayStats();
+      cout << endl;
+      cout << "Enemy Stats:" << endl;
       enemy.displayEnemyStats();
 
       cout << "Choose an action: " << endl;
@@ -34,6 +37,7 @@ void BattleSystem::StartBattle() {
         cout << "You shot a fireball dealing " << player.attackPower << " damage to the enemy!" << endl;
         enemy.enemyHealth = enemy.enemyHealth - player.attackPower;
         player.mana = player.mana - 5;
+        cout << endl;
       }
       else if (choice == 1 && player.mana < 5)
       {

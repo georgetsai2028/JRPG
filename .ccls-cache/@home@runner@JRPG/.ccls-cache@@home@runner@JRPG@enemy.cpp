@@ -11,11 +11,13 @@ void Enemy::setDifficulty(const string &difficulty)
   if (difficulty == "easy") {
     enemyHealth = 30;
     enemyDamage = 5;
-  } else if (difficulty == "normal") {
-    enemyHealth = 100;
+  } 
+  if (difficulty == "normal") {
+    enemyHealth = 60;
     enemyDamage = 15;
-  } else if (difficulty == "hard") {
-    enemyHealth = 200;
+  } 
+  if (difficulty == "hard") {
+    enemyHealth = 100;
     enemyDamage = 30;
   }
 }
