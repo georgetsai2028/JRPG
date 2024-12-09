@@ -13,6 +13,7 @@ public:
 
 //display player stats
     void displayStats() const;
+    void levelUp();
 
     int health;
     int attackPower;

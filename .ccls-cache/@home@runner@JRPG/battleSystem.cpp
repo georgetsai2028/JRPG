@@ -12,10 +12,10 @@ using namespace std;
 
 void BattleSystem::StartBattle() {
   int choice = 0;
+  cout << endl;
   cout << "Battle Start!\n";
 
     while (player.health > 0 && enemy.enemyHealth > 0) {
-      cout << "Your Stats:" << endl;
       player.displayStats();
       cout << endl;
       cout << "Enemy Stats:" << endl;
@@ -24,6 +24,7 @@ void BattleSystem::StartBattle() {
       cout << "Choose an action: " << endl;
       cout << "1. Attack" << endl;
       cout << "2. Run Away (gain 10 health, gain 10 mana)" << endl;
+      cout << endl;
       
       cin >> choice;
       while (choice != 1 && choice != 2)
@@ -31,6 +32,7 @@ void BattleSystem::StartBattle() {
         cout << "Invalid Input, please enter only 1 or 2" << endl;
         cin.clear();
         cin >> choice;
+        cout << endl;
       }
       if (choice == 1 && player.mana > 5) //Player attacks
       {
@@ -43,12 +45,14 @@ void BattleSystem::StartBattle() {
       {
         cout << "You are out of mana :(" << endl;
         cout << "You punch the enemy for 5 damage!" << endl;
+        cout << endl;
         enemy.enemyHealth = enemy.enemyHealth - 5;
       }
       else if (choice == 2)
       {
         cout << "You ran away strategically, totally not because you're scared" << endl;
         cout << "You gained 10 health and 10 mana" << endl;
+        cout << endl;
         player.health += 10;
         player.mana += 10;
       }
@@ -56,15 +60,19 @@ void BattleSystem::StartBattle() {
       //enemy turn
       cout << "Enemy attacks you for " << enemy.enemyDamage << " damage" << endl;
       player.health = player.health - enemy.enemyDamage;
+      cout << endl;
 
       cout << "You regenerate 5 mana. Current Mana: " << player.mana << endl;
+      cout << endl;
     }
       if (player.health <= 0) 
       {
         cout << "You have been defeated..." << endl;
+        cout << endl;
       } 
       else if (enemy.enemyHealth <= 0) 
       {
         cout << "You defeated the enemy!" << endl;
+        cout << endl;
       }
 }

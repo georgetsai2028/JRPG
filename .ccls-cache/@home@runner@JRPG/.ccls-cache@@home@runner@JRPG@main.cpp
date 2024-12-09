@@ -19,7 +19,9 @@ int main() {
   // Create the first BattleSystem object
   BattleSystem firstBattle(player, goblin);
   firstBattle.StartBattle();
-
+  player.levelUp();
+  player.displayStats();
+  
   Enemy knight(60, 15);
   knight.setDifficulty("normal");
 
