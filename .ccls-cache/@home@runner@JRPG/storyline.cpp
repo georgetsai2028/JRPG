@@ -48,12 +48,15 @@ void secondBattle() {
   cout << "Clang! Clang!, you sense something to the right and dodge towards the left" << endl;
   cout << "Foosh!! You seen the tip of a sword and a knight weilding it!" << endl;
   cout << "No time to think!" << endl;
+  cout << endl;
 }
 
 void afterDefeatingTheKnight(){
   cout << "You take the knights sword!" << endl;
   cout << "Attack + 25" << endl;
   cout << "Theres two dark long corridors, do you want to go left or right?" << endl;
+  cout << "You hear screaming and run into the right corridor" << endl;
+  cout << "A fellow student is about to get eaten by a giant orc" << endl;
   cout << "You throw the sword and it bounces off the giant orc" << endl;
   cout << "He drops the fellow student and runs towards you!" << endl;
   cout << "RUN!!! HE'S TOO STRONG - yells fellow student" << endl;
