@@ -2,16 +2,18 @@
 #include "enemy.h"
 #include "player.h"
 #include "storyline.h"
+#include "blackjack.h"
 #include <iostream>
 #include <string>
 using namespace std;
 
 int main() {
+  /*
   displayStorylinePT1();
   displayStorylinePT2();
   displayStorylinePT3();
   firstBattle();
-
+  
   Player player;
   // creates the first battle with goblin set to easy mode
   Enemy goblin(40, 10);
@@ -44,6 +46,9 @@ int main() {
   BattleSystem thirdBattle(player, orc);
   thirdBattle.StartBattle();
   player.levelUp();
+*/
+  BlackJack BJGame;
+  BJGame.startBlackJack();
 
   return 0;
 }
