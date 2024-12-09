@@ -9,7 +9,7 @@ using namespace std;
 class Player {
 public:
     Player(int health = 100, int attackPower = 20, int mana = 20); 
-//default onstructor
+//default constructor
 
 //display player stats
     void displayStats() const;

@@ -3,6 +3,7 @@
 #include "player.h"
 #include "storyline.h"
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main() {
@@ -36,7 +37,15 @@ int main() {
   //storyline after defeating the knight
   player.attackPower += 25;
   afterDefeatingTheKnight();
+
+  Enemy orc(150, 40);
+  orc.setDifficulty("hard");
+
+  //thirdBattle();
   
+  BattleSystem thirdBattle(player, orc);
+  thirdBattle.StartBattle();
+  player.levelUp();
 
   return 0;
 }
