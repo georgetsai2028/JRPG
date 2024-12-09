@@ -40,8 +40,6 @@ int main() {
 
   Enemy orc(150, 40);
   orc.setDifficulty("hard");
-
-  //thirdBattle();
   
   BattleSystem thirdBattle(player, orc);
   thirdBattle.StartBattle();

@@ -54,6 +54,9 @@ void afterDefeatingTheKnight(){
   cout << "You take the knights sword!" << endl;
   cout << "Attack + 25" << endl;
   cout << "Theres two dark long corridors, do you want to go left or right?" << endl;
+}
+
+void thirdBattle(){
   cout << "You throw the sword and it bounces off the giant orc" << endl;
   cout << "He drops the fellow student and runs towards you!" << endl;
   cout << "RUN!!! HE'S TOO STRONG - yells fellow student" << endl;
