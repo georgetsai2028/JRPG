@@ -6,4 +6,9 @@ void displayStorylinePT2();
 void displayStorylinePT3();
 void firstBattle();
 
+void stormingToTheDemonKingsCastle();
+void secondBattle();
+void afterDefeatingTheKnight();
+
+
 #endif

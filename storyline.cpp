@@ -34,3 +34,24 @@ void firstBattle() {
   cout << "Battle sequence starts." << endl;
   cout << endl;
 }
+void stormingToTheDemonKingsCastle() {
+  cout << endl;
+  cout << "You feel enraged and don't know what to do" << endl;
+  cout << "Announcement: Emergency! Emergency! The Demon King has invaded and the King has been slain!" << endl;
+  cout << "You rush take your horse and rush to the Demon King's Castle" << endl;
+  cout << "You arrive and for some reason no one is there" << endl;
+  cout << endl;
+}
+
+void secondBattle() {
+  cout << "A weird veil is covered in the entrance and you rush in looking for the Demon King" << endl;
+  cout << "Clang! Clang!, you sense something to the right and dodge towards the left" << endl;
+  cout << "Foosh!! You seen the tip of a sword and a knight weilding it!" << endl;
+  cout << "No time to think!" << endl;
+}
+
+void afterDefeatingTheKnight(){
+  cout << "You take the knights sword!" << endl;
+  cout << "Attack + 25" << endl;
+  cout << "Theres two dark long corridors, do you want to go left or right?" << endl;
+}

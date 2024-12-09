@@ -12,22 +12,31 @@ int main() {
   firstBattle();
 
   Player player;
-
+  // creates the first battle with goblin set to easy mode
   Enemy goblin(40, 10);
   goblin.setDifficulty("easy");
 
-  // Create the first BattleSystem object
   BattleSystem firstBattle(player, goblin);
   firstBattle.StartBattle();
   player.levelUp();
   player.displayStats();
-  
-  Enemy knight(60, 15);
+
+  //storyline after fight
+  stormingToTheDemonKingsCastle();
+  secondBattle();
+
+  //creates second fight with knight
+  Enemy knight(80, 20);
   knight.setDifficulty("normal");
 
-  // Create the second BattleSystem object
   BattleSystem secondBattle(player, knight);
   secondBattle.StartBattle();
+  player.levelUp();
+  
+  //storyline after defeating the knight
+  player.attackPower += 25;
+  afterDefeatingTheKnight();
+  
 
   return 0;
 }
