@@ -35,12 +35,12 @@ void BlackJack::startBlackJack(){
     }
     else if (cards[playerCardOne] == "Ace" && playerCardTwo == 10)
     {
-      cout << "WOW LUCKY 21! YOU WIN!" << endl;
+      cout << "WOW LUCKY 21! The Demon King Reveals his cards!" << endl;
       break;
     }
     else if (cards[playerCardTwo] == "Ace" && playerCardOne == 10)
     {
-      cout << "WOW LUCKY 21! YOU WIN!" << endl;
+      cout << "WOW LUCKY 21! The Demon King Reveals his cards!" << endl;
       break;
     }
     else
@@ -72,7 +72,7 @@ void BlackJack::startBlackJack(){
     if (hitOrStand == 's')
     {
       cout << "You stand!" << " Your current score is " << playerScore << "!" << endl;
-      cout << "The King Reveals his cards!" << endl;
+      cout << "The Demon King Reveals his cards!" << endl;
       break;
     }
     else if (hitOrStand == 'h')
@@ -82,7 +82,58 @@ void BlackJack::startBlackJack(){
       playerCardOneSuit = rand() % 4;
       
       playerScore += cardValue[playerCardOne];
-      cout << playerScore << endl;
+      cout << "Your current score: " << playerScore << endl;
+      if (playerScore == 21)
+      {
+        cout << "WOW YOU HIT 21! The Demon King Reveals his cards!" << endl;
+        break;
+      }
+      else if (playerScore > 21) 
+      {
+        cout << "YOU BUSTED! LOSER!" << endl;
+        cout << "GAME OVER!" << endl;
+        break;
+      }
+      else if (playerScore < 21)
+      {
+        cout << "Type 'h' to hit or 's' to stand" << endl;
+        cout << endl;
+        cin.clear();
+        cin >> hitOrStand;
+        
+        while (hitOrStand != 'h' && hitOrStand != 's') //checks for correct input
+          {
+            cout << "Invalid Input, enter 'h' for hit and 's' for stand " << endl;
+            cout << endl;
+            cin >> hitOrStand;
+          }
+          if (hitOrStand == 's')
+          {
+            cout << "You stand!" << " Your current score is " << playerScore << "!" << endl;
+            cout << "The Demon King Reveals his cards!" << endl;
+            break;
+          }
+          else if (hitOrStand == 'h')
+          {
+            cout << "You chose to hit!" << endl;
+            playerCardOne = rand() % 13;
+            playerCardOneSuit = rand() % 4;
+
+            playerScore += cardValue[playerCardOne];
+            cout << "Your current score: " << playerScore << endl;
+          }
+            if (playerScore == 21)
+            {
+              cout << "WOW YOU HIT 21! The Demon King Reveals his cards!" << endl;
+              break;
+            }
+            else if (playerScore > 21) 
+            {
+              cout << "YOU BUSTED! LOSER!" << endl;
+              cout << "GAME OVER!" << endl;
+              break;
+            }
+      }
     }
   }
 }
