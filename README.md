@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to our JRPG (Japanese Role-Playing Game) Adventure Game! This project is a turn-based combat RPG where players battle enemies, progress through a story, and manage their character's stats and abilities. Designed and implemented in C++ as a final project, the game emphasizes modular programming, file handling, and dynamic gameplay mechanics.
+Welcome to our JRPG (Japanese Role-Playing Game) Adventure Game! This project is a turn-based combat RPG where you battle enemies, progress through a story, and manage their character's stats and abilities. Designed and implemented in C++ as a final project, the game emphasizes modular programming, file handling, and dynamic gameplay mechanics.
 
 ## Features
 
