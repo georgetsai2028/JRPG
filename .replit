@@ -1,8 +1,8 @@
 modules = ["cpp-clang14", "c-clang14"]
-run = "g++ main.cpp storyline.cpp player.cpp enemy.cpp battleSystem.cpp blackjack.cpp -o main && ./main"
+run = "g++ main.cpp storyline.cpp player.cpp enemy.cpp battleSystem.cpp blackjack.cpp blackjack2.cpp -o main && ./main"
 
 [nix]
 channel = "stable-24_05"
 
 [deployment]
-run = ["sh", "-c", "g++ main.cpp storyline.cpp player.cpp enemy.cpp battleSystem.cpp blackjack.cpp -o main && ./main"]
+run = ["sh", "-c", "g++ main.cpp storyline.cpp player.cpp enemy.cpp battleSystem.cpp blackjack.cpp blackjack2.cpp -o main && ./main"]

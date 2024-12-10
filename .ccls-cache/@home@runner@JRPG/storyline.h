@@ -9,5 +9,7 @@ void firstBattle();
 void stormingToTheDemonKingsCastle();
 void secondBattle();
 void afterDefeatingTheKnight();
+void afterDefeatingTheOrc();
 
+void finale();
 #endif

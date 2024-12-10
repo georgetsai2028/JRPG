@@ -62,3 +62,22 @@ void afterDefeatingTheKnight(){
   cout << "RUN!!! HE'S TOO STRONG - yells fellow student" << endl;
   cout << endl;
 }
+
+void afterDefeatingTheOrc() {
+  cout << "You run to help the student and you're unable to move" << endl;
+  cout << "Everything goes dark and you are now seated at a card table" << endl;
+  cout << "In front of you is the Demon King!" << endl;
+  cout << "Demon King: The game is simple, win and I'll let you go. Lose and you're trapped inside these cards forever" << endl;
+  cout << "You have no choice but to play blackjack" << endl;
+  cout << endl;
+}
+
+void finale()
+{
+  cout << endl;
+  cout << "Everything goes bright and the Demon King turns into the real King!" << endl;
+  cout << "CONGRATULATIONS! This was your final test in order to graduate the magic academy!" << endl;
+  cout << "Now you are a fully capable mage, worthy of this staff!" << endl;
+  cout << "You receive the staff that signals you have graduated the magic academy!" << endl;
+  cout << "CONGRATULATIONS ON BEATING THIS GAME!" << endl;
+}

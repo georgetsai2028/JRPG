@@ -15,10 +15,14 @@ public:
 
   int playerCardOne;
   int playerCardOneSuit;
+  int playerCardTwo;
+  int playerCardTwoSuit;
   int numOfAces;
 
   int enemyCardOne;
   int enemyCardOneSuit;
+  int enemyCardTwo;
+  int enemyCardTwoSuit;
 
   bool endTurn;
   bool enemyTurn;

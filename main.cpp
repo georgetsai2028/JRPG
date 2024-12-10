@@ -3,12 +3,13 @@
 #include "player.h"
 #include "storyline.h"
 #include "blackjack.h"
+#include "blackjack2.h"
 #include <iostream>
 #include <string>
 using namespace std;
 
 int main() {
-  /*
+
   displayStorylinePT1();
   displayStorylinePT2();
   displayStorylinePT3();
@@ -23,7 +24,7 @@ int main() {
   firstBattle.StartBattle();
   player.levelUp();
   player.displayStats();
-
+  
   //storyline after fight
   stormingToTheDemonKingsCastle();
   secondBattle();
@@ -46,9 +47,11 @@ int main() {
   BattleSystem thirdBattle(player, orc);
   thirdBattle.StartBattle();
   player.levelUp();
-*/
-  BlackJack BJGame;
-  BJGame.startBlackJack();
 
+  afterDefeatingTheOrc();
+  
+  BlackJack2 BJGame2;
+  BJGame2.startBlackJack2();
+  
   return 0;
 }
