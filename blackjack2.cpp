@@ -5,7 +5,7 @@
 #include "storyline.h"
 using namespace std;
 
-void BlackJack2::startBlackJack2(){
+void BlackJack2::startBlackJack2(){ //blackjack starting with one card
   cout << "Your turn!" << endl;
   srand((unsigned)time(0));
 

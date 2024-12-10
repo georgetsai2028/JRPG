@@ -50,7 +50,7 @@ int main() {
 
   afterDefeatingTheOrc();
   
-  BlackJack2 BJGame2;
+  BlackJack2 BJGame2; //Blackjack but only starting with One Card
   BJGame2.startBlackJack2();
   
   return 0;
